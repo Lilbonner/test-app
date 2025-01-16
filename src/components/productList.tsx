@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductItem from '../components/productItem.tsx';
 import { Product } from '../types';
+import s from './ProductList.module.css';
 
 const ProductList: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
@@ -60,7 +61,7 @@ const ProductList: React.FC = () => {
                 <option value="Beverages">Beverages</option>
                 <option value="Sweets">Sweets</option>
             </select>
-            <ul>
+            <ul className={s.productList}>
                 {filteredProducts.map(product => (
                     <ProductItem
                         key={product.id}

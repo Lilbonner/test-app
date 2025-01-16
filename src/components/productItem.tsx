@@ -1,5 +1,6 @@
 import React from 'react';
 import { Product } from '../types';
+import s from "./productItem.module.css"
 
 interface ProductItemProps {
     product: Product;
@@ -9,7 +10,7 @@ interface ProductItemProps {
 
 const ProductItem: React.FC<ProductItemProps> = ({ product, isFavorite, onToggleFavorite }) => {
     return (
-        <li>
+        <div className={s.card}>
             <h3>{product.name}</h3>
             <img src={product.image} alt={product.name} />
             <p>Category: {product.category}</p>
@@ -17,7 +18,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, isFavorite, onToggle
             <button onClick={onToggleFavorite}>
                 {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
             </button>
-        </li>
+        </div>
     );
 };
 
