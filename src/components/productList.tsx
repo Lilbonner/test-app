@@ -3,11 +3,15 @@ import ProductItem from '../components/productItem.tsx';
 import { Product } from '../types';
 import s from './ProductList.module.css';
 
-const ProductList: React.FC = () => {
+
+interface ProductListProps {
+    searchQuery: string;
+    selectedCategory: string;
+}
+
+const ProductList: React.FC<ProductListProps> = ({ searchQuery, selectedCategory }) => {
     const [products, setProducts] = useState<Product[]>([]);
     const [favorites, setFavorites] = useState<number[]>([]);
-    const [search, setSearch] = useState('');
-    const [category, setCategory] = useState('');
 
     useEffect(() => {
         fetch('/grocery.json')
@@ -33,45 +37,25 @@ const ProductList: React.FC = () => {
         localStorage.setItem('favorites', JSON.stringify(favorites));
     }, [favorites]);
 
-    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearch(event.target.value);
-    };
-
-    const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setCategory(event.target.value);
-    };
-
     const filteredProducts = products
-        .filter(product => product.name.toLowerCase().includes(search.toLowerCase()))
-        .filter(product => !category || product.category === category);
+        .filter(product => product.name.toLowerCase().includes(searchQuery.toLowerCase()))
+        .filter(product => !selectedCategory || product.category === selectedCategory);
 
     const toggleFavorite = (id: number) => {
         setFavorites(fav => fav.includes(id) ? fav.filter(favId => favId !== id) : [...fav, id]);
     };
 
     return (
-        <div>
-            <input type="text" placeholder="Search" value={search} onChange={handleSearch} />
-            <select value={category} onChange={handleCategoryChange}>
-                <option value="">All Categories</option>
-                <option value="Fruits">Fruits</option>
-                <option value="Dairy">Dairy</option>
-                <option value="Meat">Meat</option>
-                <option value="Vegetables">Vegetables</option>
-                <option value="Beverages">Beverages</option>
-                <option value="Sweets">Sweets</option>
-            </select>
-            <ul className={s.productList}>
-                {filteredProducts.map(product => (
-                    <ProductItem
-                        key={product.id}
-                        product={product}
-                        isFavorite={favorites.includes(product.id)}
-                        onToggleFavorite={() => toggleFavorite(product.id)}
-                    />
-                ))}
-            </ul>
-        </div>
+        <ul className={s.productList}>
+            {filteredProducts.map(product => (
+                <ProductItem
+                    key={product.id}
+                    product={product}
+                    isFavorite={favorites.includes(product.id)}
+                    onToggleFavorite={() => toggleFavorite(product.id)}
+                />
+            ))}
+        </ul>
     );
 };
 
