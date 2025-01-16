@@ -1,0 +1,92 @@
+[
+  {
+    "Product Name": "Granny Smith Apples",
+    "Image": "./images/apple.png",
+    "Category": "Fruits",
+    "Price": 120
+  },
+  {
+    "Product Name": "Bananas",
+    "Image": "./images/banana.png",
+    "Category": "Fruits",
+    "Price": 80
+  },
+  {
+    "Product Name": "Milk 2.5%",
+    "Image": "./images/milk.png",
+    "Category": "Dairy",
+    "Price": 70
+  },
+  {
+    "Product Name": "Chicken Fillet",
+    "Image": "./images/chicken.png",
+    "Category": "Meat",
+    "Price": 350
+  },
+  {
+    "Product Name": "Gouda Cheese",
+    "Image": "./images/cheese.png",
+    "Category": "Dairy",
+    "Price": 450
+  },
+  {
+    "Product Name": "Tomatoes",
+    "Image": "./images/tomato.png",
+    "Category": "Vegetables",
+    "Price": 100
+  },
+  {
+    "Product Name": "Cucumbers",
+    "Image": "./images/cucumber.png",
+    "Category": "Vegetables",
+    "Price": 90
+  },
+  {
+    "Product Name": "Ground Coffee",
+    "Image": "./images/coffee.png",
+    "Category": "Beverages",
+    "Price": 250
+  },
+  {
+    "Product Name": "Green Tea",
+    "Image": "./images/tea.png",
+    "Category": "Beverages",
+    "Price": 150
+  },
+  {
+    "Product Name": "Peaches",
+    "Image": "./images/peach.png",
+    "Category": "Fruits",
+    "Price": 200
+  },
+  {
+    "Product Name": "Strawberry Yogurt",
+    "Image": "./images/yogurt.png",
+    "Category": "Dairy",
+    "Price": 80
+  },
+  {
+    "Product Name": "Vanilla Ice Cream",
+    "Image": "./images/icecream.png",
+    "Category": "Sweets",
+    "Price": 100
+  },
+  {
+    "Product Name": "Potatoes",
+    "Image": "./images/potato.png",
+    "Category": "Vegetables",
+    "Price": 60
+  },
+  {
+    "Product Name": "Dark Chocolate",
+    "Image": "./images/chocolate.png",
+    "Category": "Sweets",
+    "Price": 120
+  },
+  {
+    "Product Name": "Carrots",
+    "Image": "./images/carrot.png",
+    "Category": "Vegetables",
+    "Price": 40
+  }
+]
