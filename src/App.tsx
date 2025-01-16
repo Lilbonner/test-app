@@ -1,4 +1,5 @@
 import './App.css';
+import ProductList from "./components/productList.tsx";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
           <h1>Product Store</h1>
         </header>
         <main>
+            <ProductList />
         </main>
       </div>
   );
