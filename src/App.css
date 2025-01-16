@@ -1,16 +1,6 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0;
-}
 
-img {
-  max-width: 200px;
-  max-height: 200px;
-}
 
 body {
   font-family: Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   background-color: beige;
-  color: #333;
 }

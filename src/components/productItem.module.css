@@ -5,3 +5,10 @@
     height: 400px;
     text-align: center;
 }
+
+img {
+    background-color: white;
+    border-radius: 10px;
+    max-width: 200px;
+    max-height: 200px;
+}

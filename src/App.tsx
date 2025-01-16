@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
 import ProductList from "./components/productList.tsx";
 import './App.css';
-import Navbar from './components/navbar.tsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CustomNavbar from "./components/navbar.tsx";
 
 function App() {
     const [search, setSearch] = useState('');
@@ -19,7 +19,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <Navbar
+                <CustomNavbar
                     search={search}
                     handleSearch={handleSearch}
                     category={category}
