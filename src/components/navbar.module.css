@@ -6,6 +6,12 @@
 }
 
 .navbar {
-    padding: 0;
-    margin: 0;
+    height: 60px;
+    padding: 20px 40px 20px 40px;
+    margin:  0;
+}
+
+
+.brand {
+    font-size: 30px;
 }

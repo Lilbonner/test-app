@@ -13,20 +13,10 @@ const CustomNavbar: React.FC<NavbarProps> = ({ search, handleSearch, category, h
     return (
         <Navbar bg="dark" variant="dark" expand="lg" className={s.navbar}>
             <Container fluid>
-                <Navbar.Brand href="#">Product Search</Navbar.Brand>
+                <Navbar.Brand href="#" className={s.brand}>Product Search</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbar-nav" />
                 <Navbar.Collapse id="navbar-nav">
-                    <Nav className="me-auto">
-                        <select value={category} onChange={handleCategoryChange} className={s.category}>
-                            <option value="">all categories</option>
-                            <option value="Fruits">Fruits</option>
-                            <option value="Dairy">Dairy</option>
-                            <option value="Meat">Meat</option>
-                            <option value="Vegetables">Vegetables</option>
-                            <option value="Beverages">Beverages</option>
-                            <option value="Sweets">Sweets</option>
-                        </select>
-                    </Nav>
+                    <Nav className="mx-auto p-2"></Nav>
                     <Form className="d-flex">
                         <FormControl
                             type="search"
@@ -36,7 +26,16 @@ const CustomNavbar: React.FC<NavbarProps> = ({ search, handleSearch, category, h
                             value={search}
                             onChange={handleSearch}
                         />
-                        <Button variant="outline-success">Search</Button>
+                        <select value={category} onChange={handleCategoryChange} className={s.category}>
+                            <option value="">all categories</option>
+                            <option value="Fruits">Fruits</option>
+                            <option value="Dairy">Dairy</option>
+                            <option value="Meat">Meat</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Beverages">Beverages</option>
+                            <option value="Sweets">Sweets</option>
+                        </select>
+                        <Button variant="outline-success" className={s.button}>Favorite</Button>
                     </Form>
                 </Navbar.Collapse>
             </Container>

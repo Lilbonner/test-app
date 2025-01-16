@@ -11,13 +11,15 @@ interface ProductItemProps {
 const ProductItem: React.FC<ProductItemProps> = ({ product, isFavorite, onToggleFavorite }) => {
     return (
         <div className={s.card}>
-            <h3>{product.name}</h3>
-            <img src={product.image} alt={product.name} />
-            <p>Category: {product.category}</p>
-            <p>Price: {product.price}</p>
-            <button onClick={onToggleFavorite}>
-                {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
-            </button>
+                <img src={product.image} alt={product.name} />
+            <div className="card-body">
+                <h5 className="card-title">{product.name}</h5>
+                <p className="card-text">Category: {product.category}</p>
+                <p className="card-text">Price: {product.price}</p>
+                <button onClick={onToggleFavorite} className="btn btn-primary">
+                    {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
+                </button>
+            </div>
         </div>
     );
 };
