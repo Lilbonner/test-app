@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# Product Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application for displaying, searching, filtering, and managing a list of products with the ability to add them to favorites. The application is built using React, TypeScript, and Bootstrap.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Display Products**: View a list of products with their details including name, image, category, and price.
+- **Search**: Search for products by name.
+- **Filter by Category**: Filter products based on selected categories.
+- **Add to Favorites**: Mark products as favorites, which are then saved in localStorage to persist even after a page reload.
+- **Responsive Design**: The application is responsive and works well on mobile devices.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Bootstrap
+- localStorage
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Follow the instructions below to set up and run the project locally.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Node.js (https://nodejs.org/)
+- npm (Node Package Manager)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Project structures 
+
+- src/components: Contains the React components used in the application.
+
+- src/types: TypeScript type definitions.
+
+- src/App.tsx: Main application component.
+
+- src/index.tsx: Entry point for the React application.
+
+- public/grocery.json: Static JSON file containing the list of products.
+
+  ### Components
+- ProductList: Displays the list of products with search and filter functionalities.
+
+- ProductItem: Displays the details of a single product and allows users to add/remove it from favorites.
+
+- CustomNavbar: The navigation bar component with search and category filter inputs.
+
+### Usage
+- Search: Type in the search bar to filter products by name.
+
+- Category Filter: Use the dropdown menu to filter products by category.
+
+- Add to Favorites: Click the "Add to Favorites" button to add a product to the favorites list. Click again to remove it from the favorites list.
+
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
